@@ -1,0 +1,60 @@
+数据集目录：./dataset
+mchar_train.zip          http://tianchi-competition.oss-cn-hangzhou.aliyuncs.com/531795/mchar_train.zip
+mchar_train.json         http://tianchi-competition.oss-cn-hangzhou.aliyuncs.com/531795/mchar_train.json
+mchar_val.zip    http://tianchi-competition.oss-cn-hangzhou.aliyuncs.com/531795/mchar_val.zip
+mchar_val.json   http://tianchi-competition.oss-cn-hangzhou.aliyuncs.com/531795/mchar_val.json
+mchar_test_a.zip         http://tianchi-competition.oss-cn-hangzhou.aliyuncs.com/531795/mchar_test_a.zip
+mchar_sample_submit_A.csv        http://tianchi-competition.oss-cn-hangzhou.aliyuncs.com/531795/mchar_sample_submit_A.csv
+train image counts: 30000
+val image counts: 10000
+test image counts: 40000
+/usr/local/lib/python3.10/dist-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/usr/local/lib/python3.10/dist-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=None`.
+  warnings.warn(msg)
+loss: 0.004, acc: 37.009: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 468/468 [01:18<00:00,  5.98it/s]
+Start Evaluation
+Val Acc: 59.34: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 157/157 [00:08<00:00, 19.14it/s]
+./checkpoints/epoch-resnet50-1-acc-59.34.pth saved successfully...
+loss: 0.003, acc: 60.590: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 468/468 [01:17<00:00,  6.03it/s]
+Start Evaluation
+Val Acc: 58.71: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 157/157 [00:08<00:00, 19.61it/s]
+loss: 0.003, acc: 73.598: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 468/468 [01:17<00:00,  6.05it/s]
+Start Evaluation
+Val Acc: 69.29: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 157/157 [00:08<00:00, 19.52it/s]
+./checkpoints/epoch-resnet50-3-acc-69.29.pth saved successfully...
+loss: 0.003, acc: 71.678: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 468/468 [01:16<00:00,  6.09it/s]
+Start Evaluation
+Val Acc: 60.96: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 157/157 [00:07<00:00, 19.87it/s]
+loss: 0.008, acc: 71.788:  34%|███████████████████████████████████████▏                                                                          | 161/468 [00:27<00:49,  6.17it/s]^CException in thread Thread-2 (_pin_memory_loop):
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.10/threading.py", line 953, in run
+    self._target(*self._args, **self._kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/torch/utils/data/_utils/pin_memory.py", line 61, in _pin_memory_loop
+    do_one_step()
+  File "/usr/local/lib/python3.10/dist-packages/torch/utils/data/_utils/pin_memory.py", line 37, in do_one_step
+    r = in_queue.get(timeout=MP_STATUS_CHECK_INTERVAL)
+  File "/usr/lib/python3.10/multiprocessing/queues.py", line 122, in get
+    return _ForkingPickler.loads(res)
+  File "/usr/local/lib/python3.10/dist-packages/torch/multiprocessing/reductions.py", line 541, in rebuild_storage_fd
+    fd = df.detach()
+  File "/usr/lib/python3.10/multiprocessing/resource_sharer.py", line 57, in detach
+    with _resource_sharer.get_connection(self._id) as conn:
+  File "/usr/lib/python3.10/multiprocessing/resource_sharer.py", line 86, in get_connection
+    c = Client(address, authkey=process.current_process().authkey)
+  File "/usr/lib/python3.10/multiprocessing/connection.py", line 502, in Client
+    c = SocketClient(address)
+  File "/usr/lib/python3.10/multiprocessing/connection.py", line 630, in SocketClient
+    s.connect(address)
+FileNotFoundError: [Errno 2] No such file or directory
+loss: 0.008, acc: 71.788:  34%|███████████████████████████████████████▏                                                                          | 161/468 [00:27<00:52,  5.79it/s]
+Traceback (most recent call last):
+  File "/data/coding/baseline.py", line 412, in <module>
+    trainer.train()
+  File "/data/coding/baseline.py", line 321, in train
+    acc = self.train_epoch(epoch)
+  File "/data/coding/baseline.py", line 357, in train_epoch
+    corrects += t.all(temp, dim=1).sum().item()
+KeyboardInterrupt
