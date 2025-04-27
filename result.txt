@@ -1,0 +1,25 @@
+数据集目录：./dataset
+mchar_train.zip          http://tianchi-competition.oss-cn-hangzhou.aliyuncs.com/531795/mchar_train.zip
+mchar_train.json         http://tianchi-competition.oss-cn-hangzhou.aliyuncs.com/531795/mchar_train.json
+mchar_val.zip    http://tianchi-competition.oss-cn-hangzhou.aliyuncs.com/531795/mchar_val.zip
+mchar_val.json   http://tianchi-competition.oss-cn-hangzhou.aliyuncs.com/531795/mchar_val.json
+mchar_test_a.zip         http://tianchi-competition.oss-cn-hangzhou.aliyuncs.com/531795/mchar_test_a.zip
+mchar_sample_submit_A.csv        http://tianchi-competition.oss-cn-hangzhou.aliyuncs.com/531795/mchar_sample_submit_A.csv
+train image counts: 30000
+val image counts: 10000
+test image counts: 40000
+/usr/local/lib/python3.10/dist-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/usr/local/lib/python3.10/dist-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=None`.
+  warnings.warn(msg)
+loss: 0.004, acc: 31.417: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 468/468 [01:18<00:00,  5.99it/s]
+Start Evaluation
+Val Acc: 55.07: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 157/157 [00:08<00:00, 19.04it/s]
+./checkpoints/epoch-resnet50-1-acc-55.07.pth saved successfully...
+loss: 0.004, acc: 57.976: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 468/468 [01:16<00:00,  6.08it/s]
+Start Evaluation
+Val Acc: 58.10: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 157/157 [00:07<00:00, 19.65it/s]
+./checkpoints/epoch-resnet50-2-acc-58.10.pth saved successfully...
+Load model from ./checkpoints/epoch-resnet50-2-acc-58.10.pth successfully
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 625/625 [00:31<00:00, 19.85it/s]
+Results.saved to result.csv
